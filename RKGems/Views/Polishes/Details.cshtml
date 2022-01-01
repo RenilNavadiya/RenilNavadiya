@@ -36,7 +36,17 @@
         </dd>
     </dl>
 </div>
-<div>
+@*<div>
     <a asp-action="Edit" asp-route-id="@Model.PolishId">Edit</a> |
     <a asp-action="Index">Back to List</a>
+</div>*@
+<div class="row">
+    <div class="col-2">
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-success" />
+        </div>
+    </div>
+    <div class="col-2">
+        <a asp-action="Index" class="btn btn-warning">Cancel</a>
+    </div>
 </div>

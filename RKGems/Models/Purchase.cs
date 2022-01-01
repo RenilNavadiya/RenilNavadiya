@@ -15,10 +15,12 @@ namespace RKGems.Models
         public string ItemNumber { get; set; }
 
         [Required]
+        [Range(0,10000000000000000000)]
         [Display(Name = "Quantity")]
         public double PurchaseWeight { get; set; }
 
         [Required]
+        [Range(0, 10000000000000000000)]
         [Display(Name = "Price")]
         public double Price { get; set; }
 
@@ -28,7 +30,17 @@ namespace RKGems.Models
 
         [Required]
         [Display(Name = "Due Date")]
+        [CustomValidation(typeof(Purchase), "ValidateDeliveryDate")]
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DueDate { get; set; } = DateTime.Now;
+
+        public static ValidationResult ValidateDeliveryDate(DateTime deliveryDateToValidate)
+        {
+            if (deliveryDateToValidate.Date < DateTime.Today)
+            {
+                return new ValidationResult("Delivery Date cannot be in the past.");
+            }
+            return ValidationResult.Success;
+        }
     }
 }
