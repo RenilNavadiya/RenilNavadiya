@@ -1,0 +1,65 @@
+﻿@model IEnumerable<RKGems.Models.Polish>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="text-align:center; border:4px double; margin: 0 12em 0 12em">Polish</h2>
+
+<p>
+    <a asp-action="Create" class="btn" style="height: 1.7em; font-size: 1em; padding: 0px 8px; border: 2px solid black">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr  style="color:black; background-color:lightgray; border:4px double black">
+            <th>
+                @Html.DisplayNameFor(model => model.PolishItemNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolishQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolishWeight)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.WeightOfResult)
+            </th>*@
+            <th>
+                Remaining
+            </th>
+            <th>
+                Final Result
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolishItemNumber.ItemNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolishQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolishWeight)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.WeightOfResult.ResultId)
+            </td>*@
+            <td>
+                @(item.PolishItemNumber.PurchaseWeight - item.PolishQuantity )
+            </td>
+            <td>
+                @(((item.PolishWeight / item.WeightOfResult.ResultWeight)*100).ToString("0.00"))%
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PolishId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PolishId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PolishId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<RKGems.Models.Result>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h2  style="text-align:center; border:4px double; margin: 0 12em 0 12em">Result</h2>
+
+<p>
+    <a asp-action="Create" class="btn" style="height: 1.7em; font-size: 1em; padding: 0px 8px; border: 2px solid black">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr style="color:black; background-color:lightgray; border:4px double black">
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseItemNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultThan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultWeight)
+            </th>
+            <th>
+                Remaining
+            </th>
+            <th>
+                Result
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseItemNumber.ItemNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultThan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultWeight)
+            </td>
+            <td>
+                @(item.PurchaseItemNumber.PurchaseWeight - item.ResultThan)
+            </td>
+            <td>
+                @(((item.ResultWeight / item.PurchaseItemNumber.PurchaseWeight) * 100).ToString("0.00"))%
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
