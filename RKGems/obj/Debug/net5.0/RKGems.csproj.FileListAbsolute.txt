@@ -340,3 +340,10 @@ D:\RenilNavadiya\RKGems\obj\Debug\net5.0\RKGems.dll
 D:\RenilNavadiya\RKGems\obj\Debug\net5.0\ref\RKGems.dll
 D:\RenilNavadiya\RKGems\obj\Debug\net5.0\RKGems.pdb
 D:\RenilNavadiya\RKGems\obj\Debug\net5.0\RKGems.genruntimeconfig.cache
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.Mvc.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.Razor.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.Helpers.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\System.Web.WebPages.dll
+D:\RenilNavadiya\RKGems\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll

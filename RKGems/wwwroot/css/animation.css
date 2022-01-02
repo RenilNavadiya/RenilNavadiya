@@ -1,0 +1,118 @@
+﻿body {
+    background: #eee;
+    font-family: 'Cinzel', serif;
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    border: 2px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+}
+
+    .btn::before, .btn::after {
+        position: absolute;
+        background: #eee;
+        z-index: -1;
+        transition: 1s;
+        content: '';
+    }
+
+    .btn::before {
+        height: 40px;
+        width: 120px;
+    }
+
+    .btn::after {
+        width: 140px;
+        height: 20px;
+    }
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn:hover::before {
+    width: 0px;
+    background: #fff;
+}
+
+.btn:hover::after {
+    height: 0px;
+    background: #fff;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+
+
+.button {
+    width: 80px;
+    height: 25px;
+    border: 1px solid #333;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+}
+
+    .button::before, .button::after {
+        position: absolute;
+        background: #eee;
+        z-index: -1;
+        transition: 1s;
+        content: '';
+    }
+
+    .button::before {
+        height: 25px;
+        width: 60px;
+    }
+
+    .button::after {
+        width: 80px;
+        height: 15px;
+    }
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button:hover::before {
+    width: 0px;
+    background: #fff;
+}
+
+.button:hover::after {
+    height: 0px;
+    background: #fff;
+}
+
+.button:hover {
+    background: #fff;
+}

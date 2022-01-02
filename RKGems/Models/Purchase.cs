@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace RKGems.Models
 
         [Required]
         [Display(Name = "Item Number")]
+        //[Remote("IsItemNumberExist", "Purchase", AdditionalFields = "Id",
+        //        ErrorMessage = "Item Number already exists")]
         public string ItemNumber { get; set; }
 
         [Required]
@@ -21,24 +24,26 @@ namespace RKGems.Models
 
         [Required]
         [Range(0, 10000000000000000000)]
+        [DataType(DataType.Currency)]
         [Display(Name = "Price")]
         public double Price { get; set; }
 
         [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         [Display(Name = "Party Name")]
         public string PartyName { get; set; }
 
         [Required]
         [Display(Name = "Due Date")]
-        [CustomValidation(typeof(Purchase), "ValidateDeliveryDate")]
+        [CustomValidation(typeof(Purchase), "ValidateDueDate")]
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DueDate { get; set; } = DateTime.Now;
 
-        public static ValidationResult ValidateDeliveryDate(DateTime deliveryDateToValidate)
+        public static ValidationResult ValidateDueDate(DateTime dueDate)
         {
-            if (deliveryDateToValidate.Date < DateTime.Today)
+            if (dueDate.Date < DateTime.Today)
             {
-                return new ValidationResult("Delivery Date cannot be in the past.");
+                return new ValidationResult("Due Date cannot be in the past.");
             }
             return ValidationResult.Success;
         }
