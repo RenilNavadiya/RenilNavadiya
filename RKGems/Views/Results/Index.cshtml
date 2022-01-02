@@ -5,8 +5,10 @@
 }
 <h2  style="text-align:center; border:4px double; margin: 0 12em 0 12em">Result</h2>
 
+<link rel="stylesheet" href="~/css/animation.css">
+
 <p>
-    <a asp-action="Create" class="btn" style="height: 1.7em; font-size: 1em; padding: 0px 8px; border: 2px solid black">Create New</a>
+    <a asp-action="Create" class="btn">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -49,10 +51,23 @@
             <td>
                 @(((item.ResultWeight / item.PurchaseItemNumber.PurchaseWeight) * 100).ToString("0.00"))%
             </td>
-            <td>
+            @*<td>
                 <a asp-action="Edit" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ResultId" class="btn" style="height: 1.7em; font-size: 0.8em; padding: 0px 8px; border: 2px solid black">Delete</a>
+            </td>*@
+
+            <td>
+                <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+                <div class="row">
+                    <div class="btn button">
+                        <a asp-action="Edit" asp-route-id="@item.ResultId" class="noselect" style="color:black; border: none">Edit</a>
+                    </div>
+                    <div style="padding:0 1em 0 0"></div>
+                    <div class="btn button">
+                        <a asp-action="Delete" asp-route-id="@item.ResultId" class="noselect" style="color:black; border:none">Delete</a>
+                    </div>
+                </div>
             </td>
         </tr>
 }

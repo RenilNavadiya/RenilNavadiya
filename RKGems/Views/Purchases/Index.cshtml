@@ -59,13 +59,12 @@
                 <td>
                     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
                     <div class="row">
-                        <div class="btn button">
-                            @*<span class="noselect">Framed</span>*@
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="noselect" style="color:black; border: none">Edit</a>
+                        <div >
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn button" style="color:black">Edit</a>
                         </div>
                         <div style="padding:0 1em 0 0"></div>
-                        <div class="btn button">
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="noselect"  style="color:black; border:none">Delete</a>
+                        <div>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn button"  style="color:black">Delete</a>
                         </div>
 
                     </div>
