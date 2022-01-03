@@ -27,6 +27,8 @@ namespace RKGems
         {
             services.AddControllersWithViews();
 
+            services.AddCors();
+
             services.AddDbContext<RKGemsContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("RKGemsContext")));
         }
@@ -50,6 +52,8 @@ namespace RKGems
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

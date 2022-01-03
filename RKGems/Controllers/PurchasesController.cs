@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -25,17 +26,31 @@ namespace RKGems.Controllers
             return View(await _context.Purchase.ToListAsync());
         }
 
-        public JsonResult IsItemNumberExist(string ItemNumber, int? Id)
+        //public JsonResult IsItemNumberExist(string ItemNumber, int? Id)
+        //{
+        //    var validateName = _context.Purchase.FirstOrDefault
+        //                        (x => x.ItemNumber == ItemNumber && x.Id != Id);
+        //    if (validateName != null)
+        //    {
+        //        return Json(false, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+        //    }
+        //    else
+        //    {
+        //        return Json(true, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+        //    }
+        //}
+
+        public JsonResult IsItemNumberExist(string ItemNumber)
         {
             var validateName = _context.Purchase.FirstOrDefault
-                                (x => x.ItemNumber == ItemNumber && x.Id != Id);
+                                (x => x.ItemNumber == ItemNumber);
             if (validateName != null)
             {
-                return Json(false, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+                return Json(false);
             }
             else
             {
-                return Json(true, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+                return Json(true);
             }
         }
 

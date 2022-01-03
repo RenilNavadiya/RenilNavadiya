@@ -13,8 +13,8 @@ namespace RKGems.Models
 
         [Required]
         [Display(Name = "Item Number")]
-        //[Remote("IsItemNumberExist", "Purchase", AdditionalFields = "Id",
-        //        ErrorMessage = "Item Number already exists")]
+        [Remote("IsItemNumberExist", "Purchases", AdditionalFields = "ItemNumber",
+                ErrorMessage = "Item Number already exists")]
         public string ItemNumber { get; set; }
 
         [Required]
