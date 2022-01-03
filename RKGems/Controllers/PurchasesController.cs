@@ -32,11 +32,11 @@ namespace RKGems.Controllers
                                 (x => x.ItemNumber == ItemNumber);
             if (validateName != null)
             {
-                return Json(false, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+                return Json(false);
             }
             else
             {
-                return Json(true, System.Web.Mvc.JsonRequestBehavior.AllowGet);
+                return Json(true);
             }
         }
 
