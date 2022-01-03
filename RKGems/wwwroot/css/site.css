@@ -57,3 +57,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.nav-link:focus, .nav-link:active {
+    background-color: rgba(0, 0, 0, 0.30);
+}
