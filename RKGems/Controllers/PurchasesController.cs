@@ -26,33 +26,33 @@ namespace RKGems.Controllers
             return View(await _context.Purchase.ToListAsync());
         }
 
-        //public JsonResult IsItemNumberExist(string ItemNumber, int? Id)
-        //{
-        //    var validateName = _context.Purchase.FirstOrDefault
-        //                        (x => x.ItemNumber == ItemNumber && x.Id != Id);
-        //    if (validateName != null)
-        //    {
-        //        return Json(false, System.Web.Mvc.JsonRequestBehavior.AllowGet);
-        //    }
-        //    else
-        //    {
-        //        return Json(true, System.Web.Mvc.JsonRequestBehavior.AllowGet);
-        //    }
-        //}
-
         public JsonResult IsItemNumberExist(string ItemNumber)
         {
             var validateName = _context.Purchase.FirstOrDefault
                                 (x => x.ItemNumber == ItemNumber);
             if (validateName != null)
             {
-                return Json(false);
+                return Json(false, System.Web.Mvc.JsonRequestBehavior.AllowGet);
             }
             else
             {
-                return Json(true);
+                return Json(true, System.Web.Mvc.JsonRequestBehavior.AllowGet);
             }
         }
+
+        //public JsonResult IsItemNumberExist(string ItemNumber)
+        //{
+        //    var validateName = _context.Purchase.FirstOrDefault
+        //                        (x => x.ItemNumber == ItemNumber);
+        //    if (validateName != null)
+        //    {
+        //        return Json(false);
+        //    }
+        //    else
+        //    {
+        //        return Json(true);
+        //    }
+        //}
 
         // GET: Purchases/Details/5
         public async Task<IActionResult> Details(int? id)
