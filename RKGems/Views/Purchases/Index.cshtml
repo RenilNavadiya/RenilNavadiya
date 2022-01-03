@@ -10,7 +10,7 @@
 <p>
     <a asp-action="Create" class="btn">Create New</a>
 </p>
-<table class="table">
+<table class="table" >
     <thead>
         <tr style="color:black; background-color:lightgray; border:4px double black">
             <th>
@@ -60,11 +60,11 @@
                     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
                     <div class="row">
                         <div >
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn button" style="color:black">Edit</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="button" style="color:black; border-radius: 2px;">Edit</a>
                         </div>
                         <div style="padding:0 1em 0 0"></div>
                         <div>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn button"  style="color:black">Delete</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="button"  style="color: black; border-radius: 2px">Delete</a>
                         </div>
 
                     </div>
