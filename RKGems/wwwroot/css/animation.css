@@ -117,3 +117,9 @@
 .button:hover {
     background: #fff;
 }
+
+li:hover {
+    background-color: ButtonFace;
+    opacity: 10%;
+    border-radius: 7px;
+}
