@@ -75,7 +75,6 @@
     position: relative;
     z-index: 0;
     transition: 1s;
-    border-radius: 2px;
 }
 
     .button::before, .button::after {
@@ -118,14 +117,8 @@
     background: #fff;
 }
 
-li:hover {
+/*li:hover {
     background-color: ButtonFace;
     opacity: 10%;
     border-radius: 7px;
-}
-
-@media (min-width: 40em){
-    h2{
-        margin: 0 2em;
-    }
-}
+}*/
