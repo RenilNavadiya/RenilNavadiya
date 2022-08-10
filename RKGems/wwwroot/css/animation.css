@@ -123,3 +123,9 @@ li:hover {
     opacity: 10%;
     border-radius: 7px;
 }
+
+@media (min-width: 40em){
+    h2{
+        margin: 0 2em;
+    }
+}

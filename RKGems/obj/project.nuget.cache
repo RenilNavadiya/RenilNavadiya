@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GMj0lo9Fsa7+Kl9d1MoYHeQ2re95NXBYONT+IrVoh8QqsubW+6C/dU2xipKU2PTYhXH7Jm7KEcUbQ57rX0HkIw==",
+  "dgSpecHash": "NH1TRn13tq2zv4aFBIqdrN4K1OjPQdmvHjakSKSAd0UYCIFy1fCeysjjVsvRI94jGnE0/iuU2noYjQtPwskrow==",
   "success": true,
-  "projectFilePath": "D:\\RenilNavadiya\\RKGems\\RKGems.csproj",
+  "projectFilePath": "D:\\Projects\\RenilNavadiya\\RKGems\\RKGems.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Y540\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Y540\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",

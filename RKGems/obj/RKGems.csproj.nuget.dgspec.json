@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RenilNavadiya\\RKGems\\RKGems.csproj": {}
+    "D:\\Projects\\RenilNavadiya\\RKGems\\RKGems.csproj": {}
   },
   "projects": {
-    "D:\\RenilNavadiya\\RKGems\\RKGems.csproj": {
+    "D:\\Projects\\RenilNavadiya\\RKGems\\RKGems.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RenilNavadiya\\RKGems\\RKGems.csproj",
+        "projectUniqueName": "D:\\Projects\\RenilNavadiya\\RKGems\\RKGems.csproj",
         "projectName": "RKGems",
-        "projectPath": "D:\\RenilNavadiya\\RKGems\\RKGems.csproj",
+        "projectPath": "D:\\Projects\\RenilNavadiya\\RKGems\\RKGems.csproj",
         "packagesPath": "C:\\Users\\Y540\\.nuget\\packages\\",
-        "outputPath": "D:\\RenilNavadiya\\RKGems\\obj\\",
+        "outputPath": "D:\\Projects\\RenilNavadiya\\RKGems\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Y540\\AppData\\Roaming\\NuGet\\NuGet.Config",
